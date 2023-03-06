@@ -1,0 +1,352 @@
+/* css reset */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+/* css variable */
+:root {
+    --primarycolor: rgb(82, 81, 81);
+    /* it is used for navigation bar as background color*/
+    --secondarycolor:  rgb(168, 221, 208);
+    /* this is used for other backgound purpose*/
+    --fontcolor: rgb(74, 73, 73);
+    --hoverbackgroundcolor: rgb(136, 193, 117);
+}
+
+/* navigation bar  */
+.navbar {
+    display: flex;
+    position: sticky;
+    justify-content: space-around;
+    top: 0px;
+}
+
+/* using pseudo selector */
+.navbar::before {
+    content: "";
+    background-color: var(--secondarycolor);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.item img {
+    padding-top: 0.4rem;
+    padding-left:0.3rem;
+    height: 7rem;
+}
+
+/* now  for list style in ul */
+nav ul {
+    display: flex;
+    font-family: cursive;
+}
+
+ul li {
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+ul li a {
+    color: rgb(0, 0, 0);
+    display: block;
+    text-decoration: none;
+    border-radius: 0.9rem;
+    padding: 1rem;
+    margin-top: 1.4rem;
+}
+
+ul li a:hover {
+    color: rgb(255, 255, 255);
+    background: rgb(214, 53, 53);
+}
+
+
+#home {
+    display: flex;
+    flex-direction: column;
+/*     padding-top: 0.5rem; */
+    height: 25rem;
+    justify-content: center;
+    text-align: center;
+    font-family: cursive;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: url('bgimage\ dr.jpg') no-repeat center center/cover;
+    height: 40rem;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+#home h1 {
+    color: var(--fontcolor);
+}
+
+
+#home p {
+    color: var(--fontcolor);
+    font-size: 1.3rem;
+}
+
+.heading-1 {
+    font-size: 3.3rem;
+    font-family: cursive;
+    padding: 1rem;
+    text-align: center;
+}
+
+.btn {
+    margin-top: 1.3rem;
+    padding: 0.5rem 2rem;
+    border: 0.2rem solid #6fa37d;
+    background-color:  var(--secondarycolor);
+    color: --fontcolor;
+    font-style: bold;
+    margin: 0.8rem auto;
+    border-radius: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color:indianred;
+    color: white;
+
+}
+
+/* .searchbox{
+    font-size: 1rem;
+    border: solid 0.3rem;
+    display: inline-block;
+    position: relative;
+    border-radius: 2.5rem;
+
+}
+.searchbox input[type="text"]{
+    font-family: inherit;
+    font-weight: bold;
+    width: 2.5em;
+    height: 2.5em;
+    padding: 0.3em 2.1em 0.4em;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 2.5em; */
+
+/* .slides{
+    text-align:center;
+    width: 35%;
+ margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    overflow-y:auto ;
+    overscroll-behavior-x:contain ;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    border-radius: 25px;
+
+} */
+
+    /* some tag for image  */
+    /* filter: blur(5px);   for blur puepose */
+    /* filter: brightness(0.6);   */
+    /* filter: sepia(40%); */
+
+/* mian content 
+
+#main{
+    background: url('hospital\ bulding.jpg') no-repeat center center/cover;
+    height: 44rem;
+} */
+
+/* services section */
+#services-container {
+    margin-top: 7rem;
+    text-align: center;
+}
+
+#services {
+    display: flex;
+    flex-direction: wrap;
+    margin: 4rem ;
+
+}
+
+#services .box {
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1.2rem;
+    background-color:  rgb(168, 221, 208);
+    border: 0.3rem solid black;
+}
+
+#services img {
+    box-shadow: 0.6rem 0.6rem 1.5rem black;
+    display: block;
+    margin: auto;
+    height: 20rem;
+    border-radius: 1.5rem;
+}
+
+.heading-2 {
+    font-family: cursive;
+    font-size: 2rem;
+    margin:2.5rem auto;
+}
+
+/* now for clients section i.e patner section */
+.client-section {
+    position: relative;
+    height: 20rem;
+}
+
+/* now using pseudo selector  for background image*/
+.client-section::before {
+    content: "";
+    position: absolute;
+    /* background: url('hospital\ bulding.jpg') no-repeat center center/cover; */
+    
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.client {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item {
+    padding: 1rem;
+}
+
+.client-item img {
+    padding: 0.8rem;
+    margin: 0.8rem;
+    height: 6rem;
+    border-radius: 1.7rem;
+}
+
+.client-item img:before {
+    content: '';
+    position: absolute;
+    transition: 0.9s linear;
+}
+
+.client-item img:hover {
+    transition: 0.1s linear;
+    height: 8rem;
+    box-shadow: 0.5rem 0.5rem 1.5rem black;
+}
+
+/* now footer content  */
+
+.last1 {
+    position: relative;
+    height: 17rem;
+}
+
+.last1::before {
+    content: "";
+    position: absolute;
+    background-color:  var(--secondarycolor);
+    height: 37rem;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.last2 {
+    display: flex;
+    padding: 1.5rem;
+    justify-content: center;
+    text-align: center;
+    /* align-items: center; */
+}
+
+.last2 .last p {
+    font-family: cursive;
+    font-size: 1.5rem;
+}
+
+.last {
+    padding: 1.5rem;
+}
+
+#fb {
+    height: 3rem;
+    border-radius: 8rem;
+}
+
+#insta {
+    height: 3rem;
+    border-radius: 8rem;
+}
+
+#mb {
+    height: 3rem;
+    border-radius: 8rem;
+}
+
+/*  for footer section  */
+
+
+h3 {
+    font-family: cursive;
+    text-align: center;
+}
+
+.location {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+    margin: 1.5rem;
+}
+
+.heading-3 {
+
+    margin-top: 15rem;
+    text-align: center;
+    font-family: cursive;
+    font-size: 1rem;
+}
+
+@media (max-width=1200px){
+    html{
+        font-size: 9px;
+    }
+    .box{
+        background-color: aqua;
+    }
+}
+@media (max-width=600px){
+    html{
+        font-size: 8px;
+    }
+    .box{
+        background-color: orange;
+    }
+}
+@media (max-width=400px){
+    html{
+        font-size: 7px;
+    }
+    .box{
+        background-color: red;
+    }
+}
